@@ -43,5 +43,51 @@ body{
 .container{
     max-width: var(--anchoMaximo);
     margin: 0 auto;
-    
+
+}
+
+
+/* Inicio header */
+header .nav_top{
+    background-color: var(--colorSecundario);
+    padding: var(--margingrid)
+
+}
+
+header .nav_top .container{
+    display: flex;
+    justify-content: space-around;
+}
+
+header .nav_top div a{
+   text-decoration: none;
+}
+
+header .nav_top a i{
+    color: var(--colorPrincipal);
+    font-size: 140%;
+}
+
+header .nav_top a i span{
+    color:white;
+    display: none;
+
+}
+
+
+
+/* Final header */
+
+
+/* mediaquerys*/
+
+/*breakpoint 760px */
+@media(min-width:48em){
+    header .nav_top a span{
+        display: inline;
+    }
+    header .nav_top .container{
+        display: flex;
+        justify-content: space-between;
+    }
 }
