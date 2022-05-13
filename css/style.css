@@ -201,6 +201,88 @@ header nav:after{/*rompe las flotaciones por arriba y por abajo*/
 }
 
 
+/*inicio hero*/
+
+.hero{
+    background-image: url(../images/fondo.jpg);
+    height: 60vh;
+    background-color: #999;
+    background-blend-mode: multiply ; /*modo de fusión entre la imagen y la capa de color. en este caso multiply oscurece la imagen */
+    background-position: center center; /*al disminuir la ventana de la página se mantiene en el centro*/
+    background-size: cover; /*adapta a imagen para que siempre se vea correcta y no se repita*/
+    display: flex;
+}
+
+
+.hero .container{
+    width: 95%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.hero h1{
+    font-family: var(--fuenteSecundaria);
+    font-size: 230%;
+    color: white;
+}
+
+.hero :is(h2, .container>div){
+
+    margin: var(--margingrid), 0;
+}
+
+.hero h2{
+    color: var(--colorPrincipal);
+    font-size: 125%;
+    text-shadow: 1px 1px 3px black;/*para dar oscuridad trasera a las letras y se vea mejor*/
+}
+
+.hero p{
+    color: white;
+    font-size: 115%;
+
+}
+
+.boton {
+    display: inline-block;
+    background-color: var(--colorPrincipal);
+    padding: 1.15em;
+    color: white;
+    text-decoration: none;
+    border: 1px solid var(--colorPrincipal);
+    transition: 0.5s;
+}
+
+.boton:hover{
+background-color: transparent;
+border: 1px solid var(--colorPrincipal);
+
+
+}
+
+.boton:hover i{
+width: 160px;
+display: flex;
+justify-content: space-between;
+
+}
+
+.hero.social a{
+color: white;
+text-decoration: none;
+font-size: 200%;
+
+}
+
+
+
+
+/*final hero*/
+
+
+
 
 
 
