@@ -38,6 +38,7 @@ html{ /*regla para generar un scroll animado con ancla*/
 body{
     font-family: var(--fuentePrinciapl);
     font-size: var(--fontSize);
+    
 }
 
 .container{
@@ -121,43 +122,6 @@ header nav .menu :is(.activo, a:hover){
 }
 
 
-/* mediaquerys*/
-
-/*breakpoint 1004px */
-
-@media(min-width: 62.750em){
-    header nav .hamburguesa{
-        display: none;
-    }
-    header nav .menu{
-        float: right;
-        padding-top: 0;
-        clear: none;
-    }
-
-    header nav .menu li{
-        display: inline-block;
-    }
-
-    header nav .menu a{
-        border: 0px;
-        padding: 0.4em 0em 0.4em 2.5em;
-    }
-}
-
-
-/*breakpoint 760px */
-@media(min-width:48em){
-    header .nav_top a span{
-        display: inline;
-    }
-    header .nav_top .container{
-        display: flex;
-        justify-content: space-between;
-    }
-}
-
-
 /* Final header */
 
 
@@ -229,23 +193,27 @@ header nav:after{/*rompe las flotaciones por arriba y por abajo*/
 }
 
 .hero :is(h2, .container>div){
-
     margin: var(--margingrid), 0;
 }
 
 .hero h2{
+    margin-top: var(--margingrid);
     color: var(--colorPrincipal);
     font-size: 125%;
-    text-shadow: 1px 1px 3px black;/*para dar oscuridad trasera a las letras y se vea mejor*/
+    text-shadow: 2px 2px 3px black;/*para dar oscuridad trasera a las letras y se vea mejor*/
+    
 }
 
 .hero p{
+    margin-top: var(--margingrid);
     color: white;
     font-size: 115%;
 
 }
 
 .boton {
+    margin-top: var(--margingrid);
+    margin-bottom: var(--margingrid);
     display: inline-block;
     background-color: var(--colorPrincipal);
     padding: 1.15em;
@@ -258,34 +226,177 @@ header nav:after{/*rompe las flotaciones por arriba y por abajo*/
 .boton:hover{
 background-color: transparent;
 border: 1px solid var(--colorPrincipal);
-
-
 }
+
 
 .boton:hover i{
-width: 160px;
-display: flex;
-justify-content: space-between;
-
-}
-
-.hero.social a{
-color: white;
-text-decoration: none;
-font-size: 200%;
-
+transform:translateX(5px)
 }
 
 
+.hero .social{
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero .social a{
+    color: white;
+    text-decoration: none;
+    font-size: 26px;
+}
 
 
 /*final hero*/
 
 
+/*inicio main*/
+
+
+/* inicio our service*/
+
+section{
+    padding-bottom: 2.5em 0 4em 0;
+
+}
+
+section h2{
+    color: black;
+    font-family: var(--fuenteSecundaria);
+    font-size: 200%;
+    text-align: center;
+}
+
+section h2 span{
+    color: var(--colorPrincipal);
+}
+
+section .underline {
+    position: relative;
+    width: 100px;
+    margin: 0 auto;
+    font-weight: 700;
+    color: var(--colorPrincipal);
+    text-align: center;
+}
+
+section .underline hr{
+    position: absolute;
+    width: 100%;
+    top: -1px;
+    border-color: var(--colorPrincipal);
+
+}
+
+#ourservices .grid{
+display: grid;  
+/*grid-template-columns y grid-template-rows */ 
+grid-template-columns: 1fr;
+gap: var(--margingrid); /*gap para espacios entre columnas*/
+padding: 0 var(--margingrid);
+}
+
+section article{
+    padding: calc(var(--margingrid)*2) 0;
+   
+    border-bottom: 1px solid #aaa;
+}
+
+section article h3{
+    font-weight: 700;
+    margin: 0.5em 0;
+    font-size: 110%;
+}
+
+section p{
+    color: #aaa;
+    line-height: 1.20em; /*espacio interlineado*/
+    margin-bottom: var(--margingrid);
+}
+
+
+#ourservices article>div i{
+    border: 1px solid var(--colorPrincipal);
+    color: var(--colorPrincipal);
+    font-size: 150%;
+    padding: 0.5em;
+}
+
+.enlace{
+    text-decoration: none;
+    color: var(--colorPrincipal);
+    font-weight: 700;
+}
+
+.fa-truck{
+    transform: rotateY(180deg)
+}
 
 
 
 
+/*final our service/*
 
 
+/* mediaquerys*/
+
+/*breakpoint 768px */
+@media(min-width:48em){
+
+    header .nav_top a span{
+        display: inline;
+    }
+    header .nav_top .container{
+        justify-content: space-between;
+    }
+
+    #ourservices .grid{
+    grid-template-columns: repeat(2, 1fr);
+    
+    }
+
+    #ourservices .grid article:last-child{
+        grid-column: 1/3
+    }
+
+    section article{
+        padding: calc(var(--margingrid)*2);
+       
+        border-bottom: 0;
+        border-left: 1px solid #aaa;
+    }
+}
+
+/*breakpoint 1004px */
+
+@media(min-width: 62.750em){
+    header nav .hamburguesa{
+        display: none;
+    }
+    header nav .menu{
+        float: right;
+        padding-top: 0;
+        clear: none;
+    }
+
+    header nav .menu li{
+        display: inline-block;
+    }
+
+    header nav .menu a{
+        border: 0px;
+        padding: 0.4em 0em 0.4em 2.5em;
+    }
+
+    #ourservices .grid{
+        grid-template-columns: repeat(3, 1fr);
+        
+        }
+    
+        #ourservices .grid article:last-child{
+            grid-column: 3/4
+        }
+}
+
+/*página interesante de csstricks.com*/
 
