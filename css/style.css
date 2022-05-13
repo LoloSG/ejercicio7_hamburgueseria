@@ -146,7 +146,6 @@ header nav .menu :is(.activo, a:hover){
 }
 
 
-
 /*breakpoint 760px */
 @media(min-width:48em){
     header .nav_top a span{
@@ -160,6 +159,48 @@ header nav .menu :is(.activo, a:hover){
 
 
 /* Final header */
+
+
+/* Inicio footer*/
+
+footer{
+position: fixed;
+bottom: 0;
+width: 100%;
+background-color: var(--colorSecundario);
+color: white;
+padding: var(--margingrid);
+
+}
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+.arriba{
+    position: fixed;
+    bottom: 50px;
+    right: 5px;
+    font-size: 2em;
+}
+
+.arriba a{
+    color: var(--colorPrincipal);
+}
+
+
+
+/*Final footer*/
+
+
+header nav:after{/*rompe las flotaciones por arriba y por abajo*/
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+
 
 
 
