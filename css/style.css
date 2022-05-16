@@ -125,7 +125,7 @@ header nav .menu :is(.activo, a:hover){
 /* Final header */
 
 
-/* Inicio footer*/
+/* #region inicio footer*/
 
 footer{
 position: fixed;
@@ -154,7 +154,7 @@ footer a{
 
 
 
-/*Final footer*/
+/* #region Final footer*/
 
 
 header nav:after{/*rompe las flotaciones por arriba y por abajo*/
@@ -256,7 +256,7 @@ transform:translateX(5px)
 /* inicio our service*/
 
 section{
-    padding-bottom: 2.5em 0 4em 0;
+    padding: 2.5em 0 4.5em 0;
 
 }
 
@@ -302,7 +302,7 @@ section article{
     border-bottom: 1px solid #aaa;
 }
 
-section article h3{
+section h3{
     font-weight: 700;
     margin: 0.5em 0;
     font-size: 110%;
@@ -337,6 +337,48 @@ section p{
 
 /*final our service/*
 
+/*Inicio about us*/
+
+section h4{
+    color: var(--colorPrincipal);
+    margin-bottom: var(--margingrid);
+}
+
+section .flex{
+    padding: 0 var(--margingrid)
+}
+
+#aboutus figure{
+    width: 60%;
+    height: 400px;
+    margin: 2em auto;
+}
+
+#aboutus figure .marco{
+    border: 3px solid var(--colorPrincipal);
+    transform: rotateZ(10deg);
+    transition: 1s;
+}
+
+
+#about figure .marco img{
+    transform: rotateZ(-10deg);
+    transition: 1s;
+}
+
+#aboutus figure:hover :is(.marco, .marco img){
+    transform: rotateZ(0deg);
+
+}
+
+#aboutus .flex{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*Final about us*/
+
 
 /* mediaquerys*/
 
@@ -364,6 +406,16 @@ section p{
        
         border-bottom: 0;
         border-left: 1px solid #aaa;
+    }
+
+    #aboutus .flex{
+        flex-direction: row;
+        padding-top: var(--margingrid);
+    }
+
+    #aboutus figure{
+        width: 50%;
+        margin: 0.5em auto  
     }
 }
 
