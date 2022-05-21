@@ -1,16 +1,14 @@
 @import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+/* montserrat 400 y 700  Handlee */
+/* fontawesome cdn 6.0  */
+/*
+font-family: 'Handlee', cursive;
+font-family: 'Montserrat', sans-serif;
+*/
 
-
-/* montserrat 400 y 700 hanlee */
-/* fontawesome cdn 6.0  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css*/
-
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css
-);
-
-@import url(https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat&display=swap); /*corregir*/
-
-
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -20,39 +18,36 @@ img{
     height: auto;
 }
 
-html{ /*regla para generar un scroll animado con ancla*/
+html{
+    /* para generar un scroll animado con ancla */
     scroll-behavior: smooth;
 }
 
-
-:root{
-    --fuentePrinciapl: 'montserrat', sans-serif;
-    --fuenteSecundaria: 'handlee', cursive;
+:root {
+    --fuentePrincipal: 'Montserrat', sans-serif;
+    --fuenteSecundaria: 'Handlee', cursive;
     --colorPrincipal: #fa573a;
     --colorSecundario: #21242e;
     --fontSize: 1em;
-    --anchoMaximo: 1100px; /*encorsetado todo el contenido*/
-    --margingrid: 1em;
+    --anchoMaximo: 1100px;
+    --marginGrid: 1em;
 }
 
 body{
-    font-family: var(--fuentePrinciapl);
+    font-family: var(--fuentePrincipal);
     font-size: var(--fontSize);
-    
 }
 
 .container{
     max-width: var(--anchoMaximo);
     margin: 0 auto;
-
 }
 
+/* inicio header */
 
-/* Inicio header */
 header .nav_top{
     background-color: var(--colorSecundario);
-    padding: var(--margingrid)
-
+    padding: var(--marginGrid);
 }
 
 header .nav_top .container{
@@ -60,8 +55,8 @@ header .nav_top .container{
     justify-content: space-around;
 }
 
-header .nav_top div a{
-   text-decoration: none;
+header .nav_top a{
+    text-decoration: none;
 }
 
 header .nav_top a i{
@@ -70,14 +65,12 @@ header .nav_top a i{
 }
 
 header .nav_top a span{
-    color:white;
+    color: white;
     display: none;
-
 }
 
-header nav {
-
-  padding: var(--margingrid);  
+header nav{
+    padding: var(--marginGrid);
 }
 
 header nav .logo{
@@ -98,82 +91,76 @@ header nav .hamburguesa div{
 
 header nav .menu {
     clear: both;
-    padding: var(--margingrid);
-    padding-top: 0.625em;
+    padding-top: 0.625em /* 10px */;
     text-align: center;
 }
 
 header nav .menu a{
-    display: block; /*para que sea clickable toda la línea del menú y no solo las palabras*/
+    display: block;
     text-decoration: none;
-    padding: var(--margingrid);
+    padding: var(--marginGrid);
     color: #aaa;
     border-bottom: 1px solid #aaa;
-
 }
 
 header nav .menu li:last-child a{
     border: 0px;
-
 }
 
 header nav .menu :is(.activo, a:hover){
     color: var(--colorPrincipal);
 }
 
+header nav:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;   
+}
+/* final header */
 
-/* Final header */
-
-
-/* #region inicio footer*/
+/* principo de footer */
 
 footer{
-position: fixed;
-bottom: 0;
-width: 100%;
-background-color: var(--colorSecundario);
-color: white;
-padding: var(--margingrid);
-
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    background-color: var(--colorSecundario);
+    color: white;
+    padding: var(--marginGrid);
 }
+
 footer a{
     color: white;
     text-decoration: none;
 }
 
+footer a:hover{
+    color:  var(--colorPrincipal)
+}
+
 .arriba{
     position: fixed;
     bottom: 50px;
-    right: 5px;
+    right: 10px;
     font-size: 2em;
 }
 
 .arriba a{
-    color: var(--colorPrincipal);
+    color: var(--colorPrincipal)
 }
 
+/* final footer */
 
-
-/* #region Final footer*/
-
-
-header nav:after{/*rompe las flotaciones por arriba y por abajo*/
-    content: "";
-    display: block;
-    height: 0;
-    clear: both;
-}
-
-
-/*inicio hero*/
+/* #region inicio de hero */
 
 .hero{
     background-image: url(../images/fondo.jpg);
-    height: 60vh;
     background-color: #999;
-    background-blend-mode: multiply ; /*modo de fusión entre la imagen y la capa de color. en este caso multiply oscurece la imagen */
-    background-position: center center; /*al disminuir la ventana de la página se mantiene en el centro*/
-    background-size: cover; /*adapta a imagen para que siempre se vea correcta y no se repita*/
+    background-blend-mode: multiply;
+    background-position: center center;
+    background-size: cover;
+    height: 60vh;
     display: flex;
 }
 
@@ -183,8 +170,8 @@ header nav:after{/*rompe las flotaciones por arriba y por abajo*/
     justify-content: center;
     display: flex;
     flex-direction: column;
-
 }
+ 
 
 .hero h1{
     font-family: var(--fuenteSecundaria);
@@ -193,46 +180,39 @@ header nav:after{/*rompe las flotaciones por arriba y por abajo*/
 }
 
 .hero :is(h2, .container>div){
-    margin: var(--margingrid), 0;
+    margin: var(--marginGrid) 0;
 }
 
 .hero h2{
-    margin-top: var(--margingrid);
     color: var(--colorPrincipal);
     font-size: 125%;
-    text-shadow: 2px 2px 3px black;/*para dar oscuridad trasera a las letras y se vea mejor*/
-    
+    text-shadow: 2px 2px 3px black;
 }
 
 .hero p{
-    margin-top: var(--margingrid);
     color: white;
     font-size: 115%;
-
 }
 
-.boton {
-    margin-top: var(--margingrid);
-    margin-bottom: var(--margingrid);
+.boton{
     display: inline-block;
     background-color: var(--colorPrincipal);
     padding: 1.15em;
     color: white;
     text-decoration: none;
     border: 1px solid var(--colorPrincipal);
-    transition: 0.5s;
 }
 
 .boton:hover{
-background-color: transparent;
-border: 1px solid var(--colorPrincipal);
+    background-color: transparent;
+    color: var(--colorPrincipal)
+   
 }
-
 
 .boton:hover i{
-transform:translateX(5px)
+    transition: 0.5s;
+    transform: translateX(5px);
 }
-
 
 .hero .social{
     width: 160px;
@@ -243,21 +223,13 @@ transform:translateX(5px)
 .hero .social a{
     color: white;
     text-decoration: none;
-    font-size: 26px;
+    font-size: 200%;
 }
+/* final de hero*/
 
-
-/*final hero*/
-
-
-/*inicio main*/
-
-
-/* inicio our service*/
-
+/* inicio Ourservices */
 section{
     padding: 2.5em 0 4.5em 0;
-
 }
 
 section h2{
@@ -267,7 +239,7 @@ section h2{
     text-align: center;
 }
 
-section h2 span{
+section h2 span {
     color: var(--colorPrincipal);
 }
 
@@ -285,20 +257,16 @@ section .underline hr{
     width: 100%;
     top: -1px;
     border-color: var(--colorPrincipal);
-
 }
 
 #ourservices .grid{
-display: grid;  
-/*grid-template-columns y grid-template-rows */ 
-grid-template-columns: 1fr;
-gap: var(--margingrid); /*gap para espacios entre columnas*/
-padding: 0 var(--margingrid);
+    display: grid;
+    gap: var(--marginGrid);
+    padding: 0 var(--marginGrid);
 }
 
 section article{
-    padding: calc(var(--margingrid)*2) 0;
-   
+    padding: calc(var(--marginGrid)*2) 0;
     border-bottom: 1px solid #aaa;
 }
 
@@ -309,66 +277,60 @@ section h3{
 }
 
 section p{
-    color: #aaa;
-    line-height: 1.20em; /*espacio interlineado*/
-    margin-bottom: var(--margingrid);
+    color: #777;
+    line-height: 1.15em;
+    margin-bottom: var(--marginGrid);
 }
-
 
 #ourservices article>div i{
     border: 1px solid var(--colorPrincipal);
     color: var(--colorPrincipal);
     font-size: 150%;
-    padding: 0.5em;
+    padding : 0.5em;
 }
 
 .enlace{
     text-decoration: none;
     color: var(--colorPrincipal);
     font-weight: 700;
-}
+} 
 
 .fa-truck{
-    transform: rotateY(180deg)
+    transform: rotateY(180deg);
 }
 
 
+/*  #endregion  */
 
-
-/*final our service/*
-
-/*Inicio about us*/
+/* inicio About us */
 
 section h4{
     color: var(--colorPrincipal);
-    margin-bottom: var(--margingrid);
+    margin-bottom: 0.5em;
 }
 
 section .flex{
-    padding: 0 var(--margingrid)
+    padding: 0 var(--marginGrid);
 }
 
 #aboutus figure{
-    width: 60%;
-    height: 400px;
+    width: 85%;
     margin: 2em auto;
 }
 
-#aboutus figure .marco{
+#aboutus figure .marco {
     border: 3px solid var(--colorPrincipal);
     transform: rotateZ(10deg);
     transition: 1s;
 }
 
-
-#about figure .marco img{
+#aboutus figure .marco img{
     transform: rotateZ(-10deg);
     transition: 1s;
 }
 
 #aboutus figure:hover :is(.marco, .marco img){
     transform: rotateZ(0deg);
-
 }
 
 #aboutus .flex{
@@ -377,54 +339,58 @@ section .flex{
 }
 
 
-/*Final about us*/
+/* end About us */
 
 
-/* mediaquerys*/
 
-/*breakpoint 768px */
-@media(min-width:48em){
+/* mediaquerys */
 
+/* breakpoint 768px */
+@media(min-width: 48em){
+    
     header .nav_top a span{
-        display: inline;
+      display: inline;
     }
+
     header .nav_top .container{
-        justify-content: space-between;
+      justify-content: space-between;
     }
 
     #ourservices .grid{
-    grid-template-columns: repeat(2, 1fr);
-    
+       grid-template-columns: repeat(2, 1fr);
     }
 
     #ourservices .grid article:last-child{
-        grid-column: 1/3
+        grid-column: 1/3;
     }
 
     section article{
-        padding: calc(var(--margingrid)*2);
-       
-        border-bottom: 0;
+        padding: calc(var(--marginGrid)*2);
+        border-bottom: 0px;
         border-left: 1px solid #aaa;
     }
 
     #aboutus .flex{
         flex-direction: row;
-        padding-top: var(--margingrid);
+        padding-top: var(--marginGrid);
     }
 
     #aboutus figure{
-        width: 50%;
-        margin: 0.5em auto  
+        width: 90%;
+        margin: 0.5em auto;
     }
+
+
+
 }
 
-/*breakpoint 1004px */
+/* breakpoint 1004px */
 
 @media(min-width: 62.750em){
     header nav .hamburguesa{
         display: none;
     }
+
     header nav .menu{
         float: right;
         padding-top: 0;
@@ -441,13 +407,16 @@ section .flex{
     }
 
     #ourservices .grid{
-        grid-template-columns: repeat(3, 1fr);
-        
-        }
-    
-        #ourservices .grid article:last-child{
-            grid-column: 3/4
-        }
+       grid-template-columns: repeat(3, 1fr)
+    }
+
+    #ourservices .grid article:last-child{
+        grid-column: 3/4;
+    }
+
+    /* pagina interesante de css grid 
+    https://css-tricks.com/snippets/css/complete-guide-grid/ */
+
 }
 
 /*página interesante de csstricks.com*/
