@@ -452,7 +452,9 @@ div a{
         margin: 0.5em auto;
     }
 
-
+    .blog1{
+        width: 50%;
+    }
 
 }
 
@@ -485,11 +487,13 @@ div a{
     #ourservices .grid article:last-child{
         grid-column: 3/4;
     }
+ 
+    }
 
     /* pagina interesante de css grid 
     https://css-tricks.com/snippets/css/complete-guide-grid/ */
 
-}
+
 
 /*página interesante de csstricks.com*/
 
