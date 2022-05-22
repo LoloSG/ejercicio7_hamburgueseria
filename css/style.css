@@ -152,7 +152,7 @@ footer a:hover{
 
 /* final footer */
 
-/* #region inicio de hero */
+/* inicio de hero */
 
 .hero{
     background-image: url(../images/fondo.jpg);
@@ -256,6 +256,8 @@ section .underline hr{
     position: absolute;
     width: 100%;
     top: -1px;
+    /* border-color: var(--colorPrincipal); */
+    background-color: var(--colorPrincipal);
     border-color: var(--colorPrincipal);
 }
 
@@ -300,7 +302,7 @@ section p{
 }
 
 
-/*  #endregion  */
+/*  Final our services  */
 
 /* inicio About us */
 
@@ -339,7 +341,77 @@ section .flex{
 }
 
 
-/* end About us */
+/* final About us */
+
+
+/*inicio main OurBlogs*/
+
+#ourblogs .flex {
+    display: flex;
+    margin-top: var(--marginGrid);
+    
+}
+
+.blog {
+    width: 33%;
+    height: auto;
+    gap: var(--marginGrid);
+    padding: 0 var(--marginGrid);
+    border-left: none;
+}
+
+.blog figure{
+    margin-bottom: 30px;
+}
+
+.fecha{
+    width:  80px;
+    height: 80px;
+    position: absolute;
+    background-color: var(--colorPrincipal);
+    opacity: 0.7;
+
+}
+
+.fecha p{
+color: white;
+opacity: none;
+position: absolute;
+text-align: center;
+font-size: 25px;
+font-weight: bold;
+margin-top: 10px;
+line-height: 30px;
+
+}
+
+
+
+article h5{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: var(--colorPrincipal);
+    font-weight: bold;
+
+}
+
+.blog div p{
+    justify-content: space-between;
+    
+}
+
+
+div a{
+    color: var(--colorPrincipal);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+
+
+
+/*final main Ourblogs*/
 
 
 
@@ -380,7 +452,9 @@ section .flex{
         margin: 0.5em auto;
     }
 
-
+    .blog1{
+        width: 50%;
+    }
 
 }
 
@@ -413,11 +487,13 @@ section .flex{
     #ourservices .grid article:last-child{
         grid-column: 3/4;
     }
+ 
+    }
 
     /* pagina interesante de css grid 
     https://css-tricks.com/snippets/css/complete-guide-grid/ */
 
-}
+
 
 /*página interesante de csstricks.com*/
 
