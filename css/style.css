@@ -477,6 +477,7 @@ div a{
     display: flex;
     width: 100%;
     height: 500px;
+    padding-bottom: 100px;
 }
 
 .mainMenu section article{
@@ -519,6 +520,7 @@ div a{
 .sectionDos{
     width: 70%;
     margin-left: 5%;
+   
     
     
 
@@ -552,6 +554,7 @@ div a{
     margin-right: 30px;
     font-weight: bold;
 }
+
 
 
 
