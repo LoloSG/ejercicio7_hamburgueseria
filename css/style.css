@@ -346,6 +346,8 @@ section .flex{
 
 /*inicio main OurBlogs*/
 
+
+
 #ourblogs .flex {
     display: flex;
     margin-top: var(--marginGrid);
@@ -356,7 +358,7 @@ section .flex{
     width: 33%;
     height: auto;
     gap: var(--marginGrid);
-    padding: 0 var(--marginGrid);
+    padding: var(--marginGrid);
     border-left: none;
 }
 
@@ -368,8 +370,8 @@ section .flex{
     width:  80px;
     height: 80px;
     position: absolute;
-    background-color: var(--colorPrincipal);
-    opacity: 0.7;
+    background-color: rgba(250,	87,	58, 0.7);
+    
 
 }
 
@@ -423,7 +425,7 @@ div a{
     border: 0;
     border-top: 2px solid var(--colorPrincipal);
     background-color: var(--colorPrincipal);
-    margin: 1em 0;
+    margin: var(--marginGrid);
     padding: 0;
     width: 20%;
     
@@ -602,9 +604,9 @@ div a{
         margin: 0.5em auto;
     }
 
-    .blog1{
-        width: 50%;
-    }
+
+
+
     
 
 }
@@ -638,13 +640,21 @@ div a{
     #ourservices .grid article:last-child{
         grid-column: 3/4;
     }
+
  
     }
 
+
+
+    /* NOTA 1: No he conseguido hacer las mediaqueries del menú y el blog. 
+       NOTA 2: el header del blog no mantiene las mismas proporciones y no he conseguido cambiarlo. 
+     */
+
+
+
+
+
     /* pagina interesante de css grid 
     https://css-tricks.com/snippets/css/complete-guide-grid/ */
-
-
-
-/*página interesante de csstricks.com*/
+    /*página interesante de csstricks.com*/
 
