@@ -36,6 +36,7 @@ html{
 body{
     font-family: var(--fuentePrincipal);
     font-size: var(--fontSize);
+
 }
 
 .container{
@@ -407,7 +408,7 @@ div a{
     color: var(--colorPrincipal);
     text-decoration: none;
     font-weight: 700;
-}
+} 
 
 
 
